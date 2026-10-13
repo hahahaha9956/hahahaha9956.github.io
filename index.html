@@ -1,0 +1,13 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MCU Moodle Cloud Scanner</title>
+<style>body{font:17px/1.8 system-ui,sans-serif;color:#17223b;background:#f3f5f9;margin:0}main{max-width:800px;margin:40px auto;background:#fff;padding:32px;border-radius:16px}h1{line-height:1.3}a{color:#2356ac}section{margin-top:36px}small{color:#59677d}@media(max-width:600px){main{margin:0;border-radius:0;padding:20px}}</style>
+<main><h1>MCU Moodle Cloud Scanner</h1><p>個人使用的 Moodle 課程追蹤工具，定期讀取使用者已獲授權存取的課程公告、作業、測驗概覽、教材連結與截止日期，並將已確認的未完成期限同步到使用者自己的 Google Calendar。</p>
+<p>工具由一般程式在 GitHub Actions 執行。它使用 Google Calendar 的事件讀寫權限，先搜尋來源標記與事件 ID，避免重複建立，再更新本工具管理的課程事件。使用者需自行在 Google 官方授權頁同意存取；使用者可隨時撤銷授權。</p>
+<p><a href="#privacy">隱私政策</a> · <a href="#terms">使用條款</a></p>
+<section id="privacy"><h2>隱私政策</h2><p>更新日期：2026-10-13。</p>
+<p>本工具僅為個人課程追蹤與行事曆同步而處理資料。它會讀取課程來源、任務名稱、課程內說明、截止日期及提交狀態；Google Calendar 資料僅用於在指定學期區間搜尋已有事件，以及建立、讀回、更新或取消可辨識為本工具管理的事件。</p>
+<p>搜尋時讀到的其他日曆事件僅在執行記憶體中用於查重，不保存為課程快照。持久保存的 Google 資料為本工具管理或待核對的事件 ID、同步狀態及內容比對摘要。課程快照與執行摘要經加密保存在使用者的私人 GitHub 儲存庫；新任務與失敗摘要會出現在同一私人專案的通知介面。</p>
+<p>Moodle 憑證、OAuth 密鑰與授權 Token 使用 GitHub Secrets 保存，僅在執行時載入記憶體。登入 Cookie 不持久保存。密碼、Token 與 Cookie 不寫入程式、課程報告或公開頁面。</p>
+<p>資料處理服務包括使用者指定的 Moodle、GitHub Actions／私人儲存庫與 Google Calendar。資料僅為提供本工具功能傳輸給這些服務；不出售 Google 使用者資料，不用於廣告、模型訓練或與功能無關的分析，也不提供給其他使用者。Google API 資料的使用遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包含 Limited Use 要求。</p>
+<p>使用者可在 Google 帳戶的第三方連線設定撤銷本工具權限，並在 GitHub 移除 Secrets、快照分支、執行紀錄與通知。Google 的既有事件與 GitHub 的備份／版本歷史可能須分別移除。執行摘要保留最近 120 次；GitHub 的版本歷史依使用者儲存庫保留設定保存。管理者聯絡地址列於 Google OAuth 同意畫面。</p></section>
+<section id="terms"><h2>使用條款</h2><p>本工具供帳號擁有者追蹤其已獲授權存取的課程與日曆。課程來源是期限與要求的依據；解析不確定、登入受限或教材內文不可讀時，會標示待確認。使用者可停止排程及撤銷授權。</p><p>工具不替使用者繳交作業、開始測驗、回覆討論或變更成績，也不繞過網站驗證。雲端排程與服務可用性取決於各服務提供者；使用者應依重要任務的原始課程頁核對期限。</p></section>
+<small>這個公開頁僅說明工具用途與資料處理方式。</small></main></html>
